@@ -3,9 +3,9 @@ Exam 3, problem 2.
 
 Authors: Vibha Alangar, Aaron Wilkin, David Mutchler, Dave Fisher, 
          Matt Boutell, Amanda Stouder, their colleagues and 
-         PUT_YOUR_NAME_HERE.  January 2019.
+         Daniel Su.  January 2019.
 
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 
 def main():
@@ -48,38 +48,51 @@ def shape(n):
     You do NOT need to deal with any test cases where n > 9.
 
     It looks like this example for n=5:
-11111*
-2222*1
-333*12
-44*123
-5*1234
+    11111*
+    2222*1
+    333*12
+    44*123
+    5*1234
 
     And this one for n=3:
-111*
-22*1
-3*12
+    111*
+    22*1
+    3*12
 
 
     And this one for n=9:
-111111111*
-22222222*1
-3333333*12
-444444*123
-55555*1234
-6666*12345
-777*123456
-88*1234567
-9*12345678
+    111111111*
+    22222222*1
+    3333333*12
+    444444*123
+    55555*1234
+    6666*12345
+    777*123456
+    88*1234567
+    9*12345678
 
     :type n: int
     """
     # ------------------------------------------------------------------
-    # TODO: 2. Implement and test this function.
+    # DONE: 2. Implement and test this function.
     #          Some tests are already written for you (above).
     ####################################################################
     # IMPORTANT: In your final solution for this problem,
     #   you must NOT use string multiplication.
     ####################################################################
+    for k in range(n):
+        for j in range(n - k):
+            print(k + 1, end='')
+        if k == 0:
+            print('*')
+        else:
+            print('*', end='')
+        for l in range(k):
+            if l == (k - 1):
+                print(l + 1)
+            else:
+                print(l + 1, end='')
+
 
 
 # ----------------------------------------------------------------------
